@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-container,
+.todo-container {
+  width: 400px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.auth-container:hover,
+.todo-container:hover,
+.auth-container:focus-within,
+.todo-container:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.auth-container h2,
+.todo-container h1 {
+  text-align: center;
+}
+
+input,
+button {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+input:hover {
+  border-color: #dc2743;
+}
+
+input:focus {
+  outline: none;
+  border-color: #cc2366;
+  box-shadow: 0 0 0 4px rgba(204, 35, 102, 0.15);
+}
+
+button {
+  background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(220, 39, 67, 0.25);
+}
+
+.todo-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.todo-form input {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.todo-item + .todo-item {
+  margin-top: 10px;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.15);
+}
